@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 03</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <div id="exerciseTest">
+        <ul>
+            <li name="color" value="Red">Sun</li>
+            <span>Sea</span>
+            <li value="Cold Fusion">Sand</li>
+            <li name="accept" value="Evil Plans">Hill</li>
+            <span>Dale</span>
+        </ul>
+        <button id="button1" onclick="findLi()">Click to see the effect</button>
+    </div>
+    <script type="text/javascript">
+        var findLi = function () {
+            $("li").each(function(i, ele) {
+                if ($(ele).attr("name") != "color") {
+                    $(ele).append("<span> with no color </span>")
+                }
+            })    
+        }
+    </script>
+</body>
+</html>

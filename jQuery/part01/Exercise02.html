@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 02</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>	
+</head>
+<body>	
+	<div id = "exerciseTest">
+		<p>HTML DOM Tutorial</p>
+		<b>adding DOM elements</b>
+		<button id="button1" onclick="addDiv()">Click to see the effect</button>
+		<p>I am the last paragraph, don't forget me!</p> 
+	</div>
+	<script type="text/javascript">
+		var addDiv = function() {		
+			$("p").prepend("<div>This was added with jQuery</div>")
+		}		
+	</script>
+</body>
+</html>

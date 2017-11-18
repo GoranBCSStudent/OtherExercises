@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 03</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <label>
+                <input type="radio" name="color" value="Red">
+                <span>value?</span>
+                <div></div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="color" value="Green">
+                <span>value?</span>
+                <div></div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="color" value="Red">
+                    <span>value?</span>
+                    <div></div>
+                </label>
+        </div>
+        <button id="button1" onclick="findRed()">Click to see the effect</button>
+    </div>
+
+    <script type="text/javascript">
+        var findRed = function () {
+            $("input").each(function(i, ele) {
+                if ($(ele).attr("value") == "Red") {
+                    $(ele).next().text("the value is red!")
+                }
+            })    
+        }
+    </script>
+</body>
+</html>

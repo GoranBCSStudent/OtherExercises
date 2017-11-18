@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exercise 03</title>
+    <title>Exercise 04</title>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
 <body>
@@ -32,9 +32,9 @@
 
     <script type="text/javascript">
         var findRed = function () {
-            $("input").each(function(i, ele) {
-                if ($(ele).attr("value") == "Red") {
-                    $(ele).next().text("the value is red!")
+            $("input").each(function() {
+                if ($(this).attr("value") == "Red") {
+                    $(this).next().text("the value is red!")
                 }
             })    
         }

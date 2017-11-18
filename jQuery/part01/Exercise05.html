@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 05</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body id="exerciseTest">
+    <div id="tutorial-php">
+        <p>PHP</p>
+    </div>
+    <div id="JAVAtutorial">
+        <p>Java</p>
+    </div>
+    <div id="python-tutorial">
+        <p>Python</p>
+    </div>
+    <button id="button1" onclick="findbyAttr()">Click to see the effect</button>
+
+    <script type="text/javascript">
+        var findbyAttr = function () {
+            $("div").each(function() {
+                if ($(this).attr("id").endsWith("tutorial")) {
+                    $(this).css({"background-color": "yellow"})
+                }
+            })    
+        }
+    </script>
+</body>
+</html>

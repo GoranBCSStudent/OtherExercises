@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise02</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		span {
+			width: 100px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<form id="formMain">
+		<div>
+			<input type="text" id="nameBox">
+			<button id="btnSubmit">Submit</button>		
+		</div>
+		<div id="empty">
+			<span>First Name</span><span>Surname</span>
+		</div>
+	</form>
+	<script>
+		$('#formMain').on("submit", function(event) {
+			event.preventDefault()
+			input = $('#nameBox').val()
+			div = $('<div>')
+			span = $('<span>').append(input.split(" ")[0])
+			div.append(span)
+			span = $('<span>').append(input.split(" ")[1][0] + '.')
+			div.append(span)
+
+			$('#empty').append(div)
+			$('#nameBox').val('')
+		})
+	</script>
+</body>
+</html>

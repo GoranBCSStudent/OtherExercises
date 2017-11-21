@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise04</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<style type="text/css">
+		span {
+			width: 100px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<form id="formMain">
+		<div>
+			<input type="text" id="nameBox">
+			<button class="btn-primary" id="btnSubmit">Submit</button>		
+		</div>
+		<div id="empty">
+			<span>First Name</span><span>Surname</span>
+		</div>
+	</form>
+	<script>
+		$('#formMain').on("submit", function(event) {
+			event.preventDefault()
+			input = $('#nameBox').val()
+			ainput = input.split(" ")
+			if (input && ainput.length == 2) {
+				div = $('<div>')
+			fname = ainput[0]
+			fname = fname[0].toUpperCase() + fname.substring(1)
+			span = $('<span>').append(fname)
+			div.append(span)
+			span = $('<span>').append(ainput[1][0].toUpperCase() + '.')
+			div.append(span)
+
+			$('#empty').append(div)
+			$('#nameBox').val('')
+			} else {
+				alert('Correct format is "first name + space + surname"')
+			}
+			
+		})
+	</script>
+</body>
+</html>
